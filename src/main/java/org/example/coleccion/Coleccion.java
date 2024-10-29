@@ -1,8 +1,8 @@
-package org.example.collection;
+package org.example.coleccion;
 
-import org.example.model.ElementoColeccionable;
-import org.example.model.Moneda;
-import org.example.model.Sello;
+import org.example.ElementoColeccionable;
+import org.example.Moneda;
+import org.example.Sello;
 
 import java.util.ArrayList;
 import java.util.List;
