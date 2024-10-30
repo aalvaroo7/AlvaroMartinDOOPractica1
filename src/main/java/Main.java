@@ -89,10 +89,28 @@ public class Main {
                             scanner.next(); // Limpiar la entrada inválida
                         }
                     }
-                    System.out.print("Ingrese el diámetro: ");
-                    double diametro = scanner.nextDouble();
-                    System.out.print("Ingrese el grosor: ");
-                    double grosor = scanner.nextDouble();
+                    double diametro = 0;
+                    while (true) {
+                        System.out.print("Ingrese el diámetro: ");
+                        try {
+                            diametro = scanner.nextDouble();
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Diámetro no válido. Por favor, ingrese un número.");
+                            scanner.next(); // Limpiar la entrada inválida
+                        }
+                    }
+                    double grosor = 0;
+                    while (true) {
+                        System.out.print("Ingrese el grosor: ");
+                        try {
+                            grosor = scanner.nextDouble();
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Grosor no válido. Por favor, ingrese un número.");
+                            scanner.next(); // Limpiar la entrada inválida
+                        }
+                    }
                     System.out.print("Ingrese el estado de conservación (G, VG, F, VF, XF, AU, UNC): ");
                     String estadoConservacionMonedaInput = scanner.next();
                     EstadoConservacionMoneda estadoConservacionMoneda;
@@ -149,10 +167,28 @@ public class Main {
                             scanner.next(); // Limpiar la entrada inválida
                         }
                     }
-                    System.out.print("Ingrese la altura: ");
-                    double altura = scanner.nextDouble();
-                    System.out.print("Ingrese la anchura: ");
-                    double anchura = scanner.nextDouble();
+                    double altura = 0;
+                    while (true) {
+                        System.out.print("Ingrese la altura: ");
+                        try {
+                            altura = scanner.nextDouble();
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Altura no válida. Por favor, ingrese un número.");
+                            scanner.next(); // Limpiar la entrada inválida
+                        }
+                    }
+                    double anchura = 0;
+                    while (true) {
+                        System.out.print("Ingrese la anchura: ");
+                        try {
+                            anchura = scanner.nextDouble();
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Anchura no válida. Por favor, ingrese un número.");
+                            scanner.next(); // Limpiar la entrada inválida
+                        }
+                    }
                     System.out.print("Ingrese la imagen: ");
                     String imagen = scanner.next();
                     System.out.print("Ingrese el estado de conservación (U, NSG, NF, N): ");
