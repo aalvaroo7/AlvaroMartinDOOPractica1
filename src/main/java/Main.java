@@ -24,13 +24,13 @@ public class Main {
             System.out.println("0-Salir");
             System.out.print("Seleccione una opción: ");
 
-            try {
-                opcion = scanner.nextInt(); // Leer la opción seleccionada por el usuario
-            } catch (InputMismatchException e) {
+            // Validar la entrada del usuario para la opción del menú
+            while (!scanner.hasNextInt()) {
                 System.out.println("Opción no válida. Por favor, ingrese un número.");
                 scanner.next(); // Limpiar la entrada inválida
-                continue; // Volver al inicio del bucle
+                System.out.print("Seleccione una opción: ");
             }
+            opcion = scanner.nextInt();
 
             switch (opcion) {
                 case 1:
@@ -50,18 +50,45 @@ public class Main {
                             scanner.next(); // Limpiar la entrada inválida
                         }
                     }
-                    System.out.print("Ingrese el valor: ");
-                    double valorMoneda = scanner.nextDouble();
+                    double valorMoneda = 0;
+                    while (true) {
+                        System.out.print("Ingrese el valor: ");
+                        try {
+                            valorMoneda = scanner.nextDouble();
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Valor no válido. Por favor, ingrese un número.");
+                            scanner.next(); // Limpiar la entrada inválida
+                        }
+                    }
                     System.out.print("Ingrese la unidad monetaria: ");
                     String unidadMonetariaMoneda = scanner.next();
                     System.out.print("Ingrese la rareza (1-100): ");
                     int rarezaMoneda = scanner.nextInt();
-                    System.out.print("Ingrese el precio: ");
-                    double precioMoneda = scanner.nextDouble();
+                    double precioMoneda = 0;
+                    while (true) {
+                        System.out.print("Ingrese el precio: ");
+                        try {
+                            precioMoneda = scanner.nextDouble();
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Precio no válido. Por favor, ingrese un número.");
+                            scanner.next(); // Limpiar la entrada inválida
+                        }
+                    }
                     System.out.print("Ingrese la composición: ");
                     String composicion = scanner.next();
-                    System.out.print("Ingrese el peso: ");
-                    double peso = scanner.nextDouble();
+                    double peso = 0;
+                    while (true) {
+                        System.out.print("Ingrese el peso: ");
+                        try {
+                            peso = scanner.nextDouble();
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Peso no válido. Por favor, ingrese un número.");
+                            scanner.next(); // Limpiar la entrada inválida
+                        }
+                    }
                     System.out.print("Ingrese el diámetro: ");
                     double diametro = scanner.nextDouble();
                     System.out.print("Ingrese el grosor: ");
@@ -96,14 +123,32 @@ public class Main {
                             scanner.next(); // Limpiar la entrada inválida
                         }
                     }
-                    System.out.print("Ingrese el valor: ");
-                    double valorSello = scanner.nextDouble();
+                    double valorSello = 0;
+                    while (true) {
+                        System.out.print("Ingrese el valor: ");
+                        try {
+                            valorSello = scanner.nextDouble();
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Valor no válido. Por favor, ingrese un número.");
+                            scanner.next(); // Limpiar la entrada inválida
+                        }
+                    }
                     System.out.print("Ingrese la unidad monetaria: ");
                     String unidadMonetariaSello = scanner.next();
                     System.out.print("Ingrese la rareza (1-100): ");
                     int rarezaSello = scanner.nextInt();
-                    System.out.print("Ingrese el precio: ");
-                    double precioSello = scanner.nextDouble();
+                    double precioSello = 0;
+                    while (true) {
+                        System.out.print("Ingrese el precio: ");
+                        try {
+                            precioSello = scanner.nextDouble();
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Precio no válido. Por favor, ingrese un número.");
+                            scanner.next(); // Limpiar la entrada inválida
+                        }
+                    }
                     System.out.print("Ingrese la altura: ");
                     double altura = scanner.nextDouble();
                     System.out.print("Ingrese la anchura: ");
