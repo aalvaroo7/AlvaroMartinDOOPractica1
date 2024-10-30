@@ -1,8 +1,8 @@
-package org.example.coleccion;
+package uax.practica1.coleccion;
 
-import org.example.ElementoColeccionable;
-import org.example.Moneda;
-import org.example.Sello;
+import uax.practica1.elementocoleccionable.ElementoColeccionable;
+import uax.practica1.moneda.Moneda;
+import uax.practica1.sello.Sello;
 
 import java.util.ArrayList;
 import java.util.List;

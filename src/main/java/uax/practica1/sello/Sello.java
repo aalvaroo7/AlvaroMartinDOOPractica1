@@ -1,6 +1,7 @@
-package org.example;
+package uax.practica1.sello;
 
-import org.example.enums.EstadoConservacionSello;
+import uax.practica1.elementocoleccionable.ElementoColeccionable;
+import uax.practica1.enums.EstadoConservacionSello;
 
 public class Sello extends ElementoColeccionable {
     private double altura;

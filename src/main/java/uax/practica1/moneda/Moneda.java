@@ -1,6 +1,7 @@
-package org.example;
+package uax.practica1.moneda;
 
-import org.example.enums.EstadoConservacionMoneda;
+import uax.practica1.elementocoleccionable.ElementoColeccionable;
+import uax.practica1.enums.EstadoConservacionMoneda;
 
 public class Moneda extends ElementoColeccionable {
     private String composicion;

@@ -1,4 +1,4 @@
-package org.example;
+package uax.practica1.elementocoleccionable;
 
 public abstract class ElementoColeccionable {
     private String pais;
