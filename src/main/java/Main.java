@@ -77,10 +77,27 @@ public class Main {
                             scanner.next(); // Limpiar la entrada inválida
                         }
                     }
-                    System.out.print("Ingrese la unidad monetaria: ");
-                    String unidadMonetariaMoneda = scanner.next();
-                    System.out.print("Ingrese la rareza (1-100): ");
-                    int rarezaMoneda = scanner.nextInt();
+                    String unidadMonetariaMoneda = "";
+                    while (true) {
+                        System.out.print("Ingrese la unidad monetaria: ");
+                        unidadMonetariaMoneda = scanner.next();
+                        if (!unidadMonetariaMoneda.matches(".*\\d.*")) {
+                            break;
+                        } else {
+                            System.out.println("Unidad monetaria no válida. Por favor, ingrese un texto.");
+                        }
+                    }
+                    int rarezaMoneda = 0;
+                    while (true) {
+                        System.out.print("Ingrese la rareza (1-100): ");
+                        try {
+                            rarezaMoneda = scanner.nextInt();
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Rareza no válida. Por favor, ingrese un número.");
+                            scanner.next(); // Limpiar la entrada inválida
+                        }
+                    }
                     double precioMoneda = 0;
                     while (true) {
                         System.out.print("Ingrese el precio: ");
@@ -184,10 +201,27 @@ public class Main {
                             scanner.next(); // Limpiar la entrada inválida
                         }
                     }
-                    System.out.print("Ingrese la unidad monetaria: ");
-                    String unidadMonetariaSello = scanner.next();
-                    System.out.print("Ingrese la rareza (1-100): ");
-                    int rarezaSello = scanner.nextInt();
+                    String unidadMonetariaSello = "";
+                    while (true) {
+                        System.out.print("Ingrese la unidad monetaria: ");
+                        unidadMonetariaSello = scanner.next();
+                        if (!unidadMonetariaSello.matches(".*\\d.*")) {
+                            break;
+                        } else {
+                            System.out.println("Unidad monetaria no válida. Por favor, ingrese un texto.");
+                        }
+                    }
+                    int rarezaSello = 0;
+                    while (true) {
+                        System.out.print("Ingrese la rareza (1-100): ");
+                        try {
+                            rarezaSello = scanner.nextInt();
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Rareza no válida. Por favor, ingrese un número.");
+                            scanner.next(); // Limpiar la entrada inválida
+                        }
+                    }
                     double precioSello = 0;
                     while (true) {
                         System.out.print("Ingrese el precio: ");
