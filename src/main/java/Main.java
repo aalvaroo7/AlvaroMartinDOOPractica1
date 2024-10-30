@@ -35,10 +35,26 @@ public class Main {
             switch (opcion) {
                 case 1:
                     // Añadir una nueva moneda
-                    System.out.print("Ingrese el país: ");
-                    String paisMoneda = scanner.next();
-                    System.out.print("Ingrese la autoridad gobernante: ");
-                    String autoridadMoneda = scanner.next();
+                    String paisMoneda = "";
+                    while (true) {
+                        System.out.print("Ingrese el país: ");
+                        paisMoneda = scanner.next();
+                        if (!paisMoneda.matches(".*\\d.*")) {
+                            break;
+                        } else {
+                            System.out.println("País no válido. Por favor, ingrese un texto.");
+                        }
+                    }
+                    String autoridadMoneda = "";
+                    while (true) {
+                        System.out.print("Ingrese la autoridad gobernante: ");
+                        autoridadMoneda = scanner.next();
+                        if (!autoridadMoneda.matches(".*\\d.*")) {
+                            break;
+                        } else {
+                            System.out.println("Autoridad gobernante no válida. Por favor, ingrese un texto.");
+                        }
+                    }
                     int annusMoneda = 0;
                     while (true) {
                         System.out.print("Ingrese el año: ");
@@ -126,10 +142,26 @@ public class Main {
                     break;
                 case 2:
                     // Añadir un nuevo sello
-                    System.out.print("Ingrese el país: ");
-                    String paisSello = scanner.next();
-                    System.out.print("Ingrese la autoridad gobernante: ");
-                    String autoridadSello = scanner.next();
+                    String paisSello = "";
+                    while (true) {
+                        System.out.print("Ingrese el país: ");
+                        paisSello = scanner.next();
+                        if (!paisSello.matches(".*\\d.*")) {
+                            break;
+                        } else {
+                            System.out.println("País no válido. Por favor, ingrese un texto.");
+                        }
+                    }
+                    String autoridadSello = "";
+                    while (true) {
+                        System.out.print("Ingrese la autoridad gobernante: ");
+                        autoridadSello = scanner.next();
+                        if (!autoridadSello.matches(".*\\d.*")) {
+                            break;
+                        } else {
+                            System.out.println("Autoridad gobernante no válida. Por favor, ingrese un texto.");
+                        }
+                    }
                     int annusSello = 0;
                     while (true) {
                         System.out.print("Ingrese el año: ");
