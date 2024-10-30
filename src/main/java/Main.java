@@ -104,7 +104,11 @@ public class Main {
                             System.out.print("Ingrese el precio: ");
                             try {
                                 precioMoneda = scanner.nextDouble();
-                                break;
+                                if (precioMoneda < 0) {
+                                    System.out.println("Precio no puede ser negativo. Intente de nuevo.");
+                                } else {
+                                    break;
+                                }
                             } catch (InputMismatchException e) {
                                 System.out.println("Precio no válido. Por favor, ingrese un número.");
                                 scanner.next(); // Limpiar la entrada inválida
@@ -117,7 +121,11 @@ public class Main {
                             System.out.print("Ingrese el peso: ");
                             try {
                                 peso = scanner.nextDouble();
-                                break;
+                                if (peso < 0) {
+                                    System.out.println("Peso no puede ser negativo. Intente de nuevo.");
+                                } else {
+                                    break;
+                                }
                             } catch (InputMismatchException e) {
                                 System.out.println("Peso no válido. Por favor, ingrese un número.");
                                 scanner.next(); // Limpiar la entrada inválida
@@ -128,7 +136,11 @@ public class Main {
                             System.out.print("Ingrese el diámetro: ");
                             try {
                                 diametro = scanner.nextDouble();
-                                break;
+                                if (diametro < 0) {
+                                    System.out.println("Diámetro no puede ser negativo. Intente de nuevo.");
+                                } else {
+                                    break;
+                                }
                             } catch (InputMismatchException e) {
                                 System.out.println("Diámetro no válido. Por favor, ingrese un número.");
                                 scanner.next(); // Limpiar la entrada inválida
@@ -139,7 +151,11 @@ public class Main {
                             System.out.print("Ingrese el grosor: ");
                             try {
                                 grosor = scanner.nextDouble();
-                                break;
+                                if (grosor < 0) {
+                                    System.out.println("Grosor no puede ser negativo. Intente de nuevo.");
+                                } else {
+                                    break;
+                                }
                             } catch (InputMismatchException e) {
                                 System.out.println("Grosor no válido. Por favor, ingrese un número.");
                                 scanner.next(); // Limpiar la entrada inválida
@@ -228,7 +244,11 @@ public class Main {
                             System.out.print("Ingrese el precio: ");
                             try {
                                 precioSello = scanner.nextDouble();
-                                break;
+                                if (precioSello < 0) {
+                                    System.out.println("Precio no puede ser negativo. Intente de nuevo.");
+                                } else {
+                                    break;
+                                }
                             } catch (InputMismatchException e) {
                                 System.out.println("Precio no válido. Por favor, ingrese un número.");
                                 scanner.next(); // Limpiar la entrada inválida
@@ -239,7 +259,11 @@ public class Main {
                             System.out.print("Ingrese la altura: ");
                             try {
                                 altura = scanner.nextDouble();
-                                break;
+                                if (altura < 0) {
+                                    System.out.println("Altura no puede ser negativa. Intente de nuevo.");
+                                } else {
+                                    break;
+                                }
                             } catch (InputMismatchException e) {
                                 System.out.println("Altura no válida. Por favor, ingrese un número.");
                                 scanner.next(); // Limpiar la entrada inválida
@@ -250,7 +274,11 @@ public class Main {
                             System.out.print("Ingrese la anchura: ");
                             try {
                                 anchura = scanner.nextDouble();
-                                break;
+                                if (anchura < 0) {
+                                    System.out.println("Anchura no puede ser negativa. Intente de nuevo.");
+                                } else {
+                                    break;
+                                }
                             } catch (InputMismatchException e) {
                                 System.out.println("Anchura no válida. Por favor, ingrese un número.");
                                 scanner.next(); // Limpiar la entrada inválida
