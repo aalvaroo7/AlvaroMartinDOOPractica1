@@ -64,7 +64,7 @@ public class Main {
                                 if (annusMoneda >= 0) {
                                     break;
                                 } else {
-                                    System.out.println("Año no válido. Por favor, ingrese un número entero.");
+                                    System.out.println("Año no válido. Por favor, ingrese un número entero no negativo.");
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Año no válido. Por favor, ingrese un número entero.");
@@ -79,7 +79,7 @@ public class Main {
                                 if (valorMoneda >= 0) {
                                     break;
                                 } else {
-                                    System.out.println("Valor no válido. Por favor, ingrese un número.");
+                                    System.out.println("Valor no válido. Por favor, ingrese un número no negativo.");
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Valor no válido. Por favor, ingrese un número.");
@@ -119,7 +119,7 @@ public class Main {
                                 if (precioMoneda >= 0) {
                                     break;
                                 } else {
-                                    System.out.println("Precio no válido. Por favor, ingrese un número.");
+                                    System.out.println("Precio no válido. Por favor, ingrese un número no negativo.");
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Precio no válido. Por favor, ingrese un número.");
@@ -144,7 +144,7 @@ public class Main {
                                 if (peso >= 0) {
                                     break;
                                 } else {
-                                    System.out.println("Peso no válido. Por favor, ingrese un número.");
+                                    System.out.println("Peso no válido. Por favor, ingrese un número no negativo.");
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Peso no válido. Por favor, ingrese un número.");
@@ -159,7 +159,7 @@ public class Main {
                                 if (diametro >= 0) {
                                     break;
                                 } else {
-                                    System.out.println("Diámetro no válido. Por favor, ingrese un número.");
+                                    System.out.println("Diámetro no válido. Por favor, ingrese un número no negativo.");
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Diámetro no válido. Por favor, ingrese un número.");
@@ -174,7 +174,7 @@ public class Main {
                                 if (grosor >= 0) {
                                     break;
                                 } else {
-                                    System.out.println("Grosor no válido. Por favor, ingrese un número.");
+                                    System.out.println("Grosor no válido. Por favor, ingrese un número no negativo.");
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Grosor no válido. Por favor, ingrese un número.");
@@ -224,7 +224,7 @@ public class Main {
                                 if (annusSello >= 0) {
                                     break;
                                 } else {
-                                    System.out.println("Año no válido. Por favor, ingrese un número entero.");
+                                    System.out.println("Año no válido. Por favor, ingrese un número entero no negativo.");
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Año no válido. Por favor, ingrese un número entero.");
@@ -239,7 +239,7 @@ public class Main {
                                 if (valorSello >= 0) {
                                     break;
                                 } else {
-                                    System.out.println("Valor no válido. Por favor, ingrese un número.");
+                                    System.out.println("Valor no válido. Por favor, ingrese un número no negativo.");
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Valor no válido. Por favor, ingrese un número.");
@@ -279,7 +279,7 @@ public class Main {
                                 if (precioSello >= 0) {
                                     break;
                                 } else {
-                                    System.out.println("Precio no válido. Por favor, ingrese un número.");
+                                    System.out.println("Precio no válido. Por favor, ingrese un número no negativo.");
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Precio no válido. Por favor, ingrese un número.");
@@ -294,7 +294,7 @@ public class Main {
                                 if (altura >= 0) {
                                     break;
                                 } else {
-                                    System.out.println("Altura no válida. Por favor, ingrese un número.");
+                                    System.out.println("Altura no válida. Por favor, ingrese un número no negativo.");
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Altura no válida. Por favor, ingrese un número.");
@@ -309,7 +309,7 @@ public class Main {
                                 if (anchura >= 0) {
                                     break;
                                 } else {
-                                    System.out.println("Anchura no válida. Por favor, ingrese un número.");
+                                    System.out.println("Anchura no válida. Por favor, ingrese un número no negativo.");
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Anchura no válida. Por favor, ingrese un número.");
