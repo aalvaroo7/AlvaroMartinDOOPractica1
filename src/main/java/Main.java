@@ -316,8 +316,16 @@ public class Main {
                                 scanner.next(); // Limpiar la entrada inválida
                             }
                         }
-                        System.out.print("Ingrese la imagen: ");
-                        String imagen = scanner.next();
+                        String imagen = "";
+                        while (true) {
+                            System.out.print("Ingrese la imagen: ");
+                            imagen = scanner.next();
+                            if (!imagen.matches(".*\\d.*")) {
+                                break;
+                            } else {
+                                System.out.println("Imagen no válida. Por favor, ingrese un texto.");
+                            }
+                        }
                         System.out.print("Ingrese el estado de conservación (U, NSG, NF, N): ");
                         String estadoConservacionSelloInput = scanner.next();
                         EstadoConservacionSello estadoConservacionSello;
