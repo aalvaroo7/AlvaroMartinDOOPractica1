@@ -4,19 +4,16 @@ import uax.practica1.Estado.EstadoConservacionSello;
 import uax.practica1.moneda.Moneda;
 import uax.practica1.sello.Sello;
 
-import java.nio.file.InvalidPathException;
-import java.nio.file.Paths;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); // Crear un objeto Scanner para leer la entrada del usuario
-        Coleccion coleccion = new Coleccion(); // Crear una nueva colección
-        int opcion = -1; // Inicializar la opción con un valor inválido
+        Scanner scanner = new Scanner(System.in);
+        Coleccion coleccion = new Coleccion();
+        int opcion = -1;
 
         do {
-            // Mostrar el menú de opciones
             System.out.println("1-Añadir una nueva moneda");
             System.out.println("2-Añadir un nuevo sello");
             System.out.println("3-Mostrar todas las monedas");
@@ -26,10 +23,9 @@ public class Main {
             System.out.println("0-Salir");
             System.out.print("Seleccione una opción: ");
 
-            // Validar la entrada del usuario para la opción del menú
             while (!scanner.hasNextInt()) {
                 System.out.println("Opción no válida. Por favor, ingrese un número.");
-                scanner.next(); // Limpiar la entrada inválida
+                scanner.next();
                 System.out.print("Seleccione una opción: ");
             }
             opcion = scanner.nextInt();
@@ -70,7 +66,7 @@ public class Main {
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Año no válido. Por favor, ingrese un número entero.");
-                                scanner.next(); // Limpiar la entrada inválida
+                                scanner.next();
                             }
                         }
                         double valorMoneda = 0;
@@ -85,7 +81,7 @@ public class Main {
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Valor no válido. Por favor, ingrese un número.");
-                                scanner.next(); // Limpiar la entrada inválida
+                                scanner.next();
                             }
                         }
                         String unidadMonetariaMoneda = "";
@@ -110,7 +106,7 @@ public class Main {
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Rareza no válida. Por favor, ingrese un número.");
-                                scanner.next(); // Limpiar la entrada inválida
+                                scanner.next();
                             }
                         }
                         double precioMoneda = 0;
@@ -125,7 +121,7 @@ public class Main {
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Precio no válido. Por favor, ingrese un número.");
-                                scanner.next(); // Limpiar la entrada inválida
+                                scanner.next();
                             }
                         }
                         String composicion = "";
@@ -150,7 +146,7 @@ public class Main {
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Peso no válido. Por favor, ingrese un número.");
-                                scanner.next(); // Limpiar la entrada inválida
+                                scanner.next();
                             }
                         }
                         double diametro = 0;
@@ -165,7 +161,7 @@ public class Main {
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Diámetro no válido. Por favor, ingrese un número.");
-                                scanner.next(); // Limpiar la entrada inválida
+                                scanner.next();
                             }
                         }
                         double grosor = 0;
@@ -180,19 +176,18 @@ public class Main {
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Grosor no válido. Por favor, ingrese un número.");
-                                scanner.next(); // Limpiar la entrada inválida
+                                scanner.next();
                             }
                         }
                         System.out.print("Ingrese el estado de conservación (G, VG, F, VF, XF, AU, UNC): ");
                         String estadoConservacionMonedaInput = scanner.next();
                         EstadoConservacionMoneda estadoConservacionMoneda;
                         try {
-                            estadoConservacionMoneda = EstadoConservacionMoneda.valueOf(estadoConservacionMonedaInput); // Validar el estado de conservación
+                            estadoConservacionMoneda = EstadoConservacionMoneda.valueOf(estadoConservacionMonedaInput);
                         } catch (IllegalArgumentException e) {
                             System.out.println("Estado de conservación no válido. Intente de nuevo.");
                             break;
                         }
-                        // Crear una nueva moneda y añadirla a la colección
                         Moneda moneda = new Moneda(paisMoneda, autoridadMoneda, annusMoneda, valorMoneda, unidadMonetariaMoneda, rarezaMoneda, precioMoneda, composicion, peso, diametro, grosor, estadoConservacionMoneda);
                         coleccion.anadirMoneda(moneda);
                         break;
@@ -230,7 +225,7 @@ public class Main {
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Año no válido. Por favor, ingrese un número entero.");
-                                scanner.next(); // Limpiar la entrada inválida
+                                scanner.next();
                             }
                         }
                         double valorSello = 0;
@@ -245,7 +240,7 @@ public class Main {
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Valor no válido. Por favor, ingrese un número.");
-                                scanner.next(); // Limpiar la entrada inválida
+                                scanner.next();
                             }
                         }
                         String unidadMonetariaSello = "";
@@ -270,7 +265,7 @@ public class Main {
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Rareza no válida. Por favor, ingrese un número.");
-                                scanner.next(); // Limpiar la entrada inválida
+                                scanner.next();
                             }
                         }
                         double precioSello = 0;
@@ -285,7 +280,7 @@ public class Main {
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Precio no válido. Por favor, ingrese un número.");
-                                scanner.next(); // Limpiar la entrada inválida
+                                scanner.next();
                             }
                         }
                         double altura = 0;
@@ -300,7 +295,7 @@ public class Main {
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Altura no válida. Por favor, ingrese un número.");
-                                scanner.next(); // Limpiar la entrada inválida
+                                scanner.next();
                             }
                         }
                         double anchura = 0;
@@ -315,18 +310,37 @@ public class Main {
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Anchura no válida. Por favor, ingrese un número.");
-                                scanner.next(); // Limpiar la entrada inválida
+                                scanner.next();
                             }
                         }
-
-                        String imagen = "";
+                        double imagenAltura = 0;
                         while (true) {
-                            System.out.print("Ingrese la imagen (ruta absoluta o relativa): ");
-                            imagen = scanner.next();
-                            if (esRutaValida(imagen)) {
-                                break;
-                            } else {
-                                System.out.println("Imagen no válida. Por favor, ingrese una ruta válida.");
+                            System.out.print("Ingrese la altura de la imagen: ");
+                            try {
+                                imagenAltura = scanner.nextDouble();
+                                if (imagenAltura >= 0) {
+                                    break;
+                                } else {
+                                    System.out.println("Altura de la imagen no válida. Por favor, ingrese un número no negativo.");
+                                }
+                            } catch (InputMismatchException e) {
+                                System.out.println("Altura de la imagen no válida. Por favor, ingrese un número.");
+                                scanner.next();
+                            }
+                        }
+                        double imagenAnchura = 0;
+                        while (true) {
+                            System.out.print("Ingrese la anchura de la imagen: ");
+                            try {
+                                imagenAnchura = scanner.nextDouble();
+                                if (imagenAnchura >= 0) {
+                                    break;
+                                } else {
+                                    System.out.println("Anchura de la imagen no válida. Por favor, ingrese un número no negativo.");
+                                }
+                            } catch (InputMismatchException e) {
+                                System.out.println("Anchura de la imagen no válida. Por favor, ingrese un número.");
+                                scanner.next();
                             }
                         }
 
@@ -334,59 +348,43 @@ public class Main {
                         String estadoConservacionSelloInput = scanner.next();
                         EstadoConservacionSello estadoConservacionSello;
                         try {
-                            estadoConservacionSello = EstadoConservacionSello.valueOf(estadoConservacionSelloInput); // Validar el estado de conservación
+                            estadoConservacionSello = EstadoConservacionSello.valueOf(estadoConservacionSelloInput);
                         } catch (IllegalArgumentException e) {
                             System.out.println("Estado de conservación no válido. Intente de nuevo.");
                             break;
                         }
-                        // Crear un nuevo sello y añadirlo a la colección
-                        Sello sello = new Sello(paisSello, autoridadSello, annusSello, valorSello, unidadMonetariaSello, rarezaSello, precioSello, altura, anchura, imagen, estadoConservacionSello);
+                        Sello sello = new Sello(paisSello, autoridadSello, annusSello, valorSello, unidadMonetariaSello, rarezaSello, precioSello, altura, anchura, imagenAltura, imagenAnchura, estadoConservacionSello);
                         coleccion.anadirSello(sello);
                         break;
                     case 3:
-                        // Mostrar todas las monedas
                         System.out.println("Monedas en la colección:");
                         for (Moneda m : coleccion.mostrarMonedas()) {
                             System.out.println(m);
                         }
                         break;
                     case 4:
-                        // Mostrar todos los sellos
                         System.out.println("Sellos en la colección:");
                         for (Sello s : coleccion.mostrarSellos()) {
                             System.out.println(s);
                         }
                         break;
                     case 5:
-                        // Mostrar el precio total de la colección
                         System.out.println("Precio total de la colección: " + coleccion.obtenerPrecioTotal());
                         break;
                     case 6:
-                        // Mostrar la rareza media de la colección
                         System.out.println("Rareza media de la colección: " + coleccion.obtenerRarezaMedia());
                         break;
                     case 0:
-                        // Salir del programa
                         System.out.println("Saliendo...");
                         break;
                     default:
-                        // Opción no válida
                         throw new IllegalArgumentException("Opción no válida");
                 }
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
-        } while (opcion != 0); // Repetir el bucle hasta que la opción sea 0
+        } while (opcion != 0);
 
-        scanner.close(); // Cerrar el objeto Scanner
-    }
-
-    private static boolean esRutaValida(String ruta) {
-        try {
-            Paths.get(ruta);
-            return true;
-        } catch (InvalidPathException e) {
-            return false;
-        }
+        scanner.close();
     }
 }

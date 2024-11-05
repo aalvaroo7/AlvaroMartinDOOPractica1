@@ -1,5 +1,4 @@
-
-        package uax.practica1.sello;
+package uax.practica1.sello;
 
 import uax.practica1.elementocoleccionable.ElementoColeccionable;
 import uax.practica1.Estado.EstadoConservacionSello;
@@ -7,14 +6,16 @@ import uax.practica1.Estado.EstadoConservacionSello;
 public class Sello extends ElementoColeccionable {
     private double altura;
     private double anchura;
-    private String imagen;
+    private double imagenAltura;
+    private double imagenAnchura;
     private EstadoConservacionSello estadoConservacion;
 
-    public Sello(String pais, String autoridadGobernante, int annus, double valor, String unidadMonetaria, int rareza, double precio, double altura, double anchura, String imagen, EstadoConservacionSello estadoConservacion) {
+    public Sello(String pais, String autoridadGobernante, int annus, double valor, String unidadMonetaria, int rareza, double precio, double altura, double anchura, double imagenAltura, double imagenAnchura, EstadoConservacionSello estadoConservacion) {
         super(pais, autoridadGobernante, annus, valor, unidadMonetaria, rareza, precio);
         this.altura = altura;
         this.anchura = anchura;
-        this.imagen = imagen;
+        this.imagenAltura = imagenAltura;
+        this.imagenAnchura = imagenAnchura;
         this.estadoConservacion = estadoConservacion;
     }
 
@@ -34,12 +35,20 @@ public class Sello extends ElementoColeccionable {
         this.anchura = anchura;
     }
 
-    public String getImagen() {
-        return imagen;
+    public double getImagenAltura() {
+        return imagenAltura;
     }
 
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
+    public void setImagenAltura(double imagenAltura) {
+        this.imagenAltura = imagenAltura;
+    }
+
+    public double getImagenAnchura() {
+        return imagenAnchura;
+    }
+
+    public void setImagenAnchura(double imagenAnchura) {
+        this.imagenAnchura = imagenAnchura;
     }
 
     public EstadoConservacionSello getEstadoConservacion() {
@@ -62,7 +71,8 @@ public class Sello extends ElementoColeccionable {
                 ", precio=" + getPrecio() +
                 ", altura=" + altura +
                 ", anchura=" + anchura +
-                ", imagen='" + imagen + '\'' +
+                ", imagenAltura=" + imagenAltura +
+                ", imagenAnchura=" + imagenAnchura +
                 ", estadoConservacion=" + estadoConservacion +
                 '}';
     }
