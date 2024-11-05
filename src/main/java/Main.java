@@ -4,6 +4,8 @@ import uax.practica1.Estado.EstadoConservacionSello;
 import uax.practica1.moneda.Moneda;
 import uax.practica1.sello.Sello;
 
+import java.nio.file.InvalidPathException;
+import java.nio.file.Paths;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -316,16 +318,18 @@ public class Main {
                                 scanner.next(); // Limpiar la entrada inválida
                             }
                         }
+
                         String imagen = "";
                         while (true) {
-                            System.out.print("Ingrese la imagen: ");
+                            System.out.print("Ingrese la imagen (ruta absoluta o relativa): ");
                             imagen = scanner.next();
-                            if (!imagen.matches(".*\\d.*")) {
+                            if (esRutaValida(imagen)) {
                                 break;
                             } else {
-                                System.out.println("Imagen no válida. Por favor, ingrese un texto.");
+                                System.out.println("Imagen no válida. Por favor, ingrese una ruta válida.");
                             }
                         }
+
                         System.out.print("Ingrese el estado de conservación (U, NSG, NF, N): ");
                         String estadoConservacionSelloInput = scanner.next();
                         EstadoConservacionSello estadoConservacionSello;
@@ -375,5 +379,14 @@ public class Main {
         } while (opcion != 0); // Repetir el bucle hasta que la opción sea 0
 
         scanner.close(); // Cerrar el objeto Scanner
+    }
+
+    private static boolean esRutaValida(String ruta) {
+        try {
+            Paths.get(ruta);
+            return true;
+        } catch (InvalidPathException e) {
+            return false;
+        }
     }
 }

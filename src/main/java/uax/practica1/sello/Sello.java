@@ -1,4 +1,5 @@
-package uax.practica1.sello;
+
+        package uax.practica1.sello;
 
 import uax.practica1.elementocoleccionable.ElementoColeccionable;
 import uax.practica1.Estado.EstadoConservacionSello;
@@ -47,5 +48,22 @@ public class Sello extends ElementoColeccionable {
 
     public void setEstadoConservacion(EstadoConservacionSello estadoConservacion) {
         this.estadoConservacion = estadoConservacion;
+    }
+
+    @Override
+    public String toString() {
+        return "Sello{" +
+                "pais='" + getPais() + '\'' +
+                ", autoridadGobernante='" + getAutoridadGobernante() + '\'' +
+                ", annus=" + getAnnus() +
+                ", valor=" + getValor() +
+                ", unidadMonetaria='" + getUnidadMonetaria() + '\'' +
+                ", rareza=" + getRareza() +
+                ", precio=" + getPrecio() +
+                ", altura=" + altura +
+                ", anchura=" + anchura +
+                ", imagen='" + imagen + '\'' +
+                ", estadoConservacion=" + estadoConservacion +
+                '}';
     }
 }
