@@ -7,26 +7,26 @@ import uax.practica1.sello.Sello;
 import java.util.ArrayList;
 import java.util.List;
 
-// Clase que representa una colección de elementos coleccionables
+// Class representing a collection of collectible items
 public class Coleccion {
-    private List<ElementoColeccionable> elementos; // Lista de elementos coleccionables
+    private List<ElementoColeccionable> elementos; // List of collectible items
 
-    // Constructor de la clase Coleccion
+    // Constructor of the Coleccion class
     public Coleccion() {
         this.elementos = new ArrayList<>();
     }
 
-    // Método para añadir una moneda a la colección
+    // Method to add a coin to the collection
     public void anadirMoneda(Moneda moneda) {
         elementos.add(moneda);
     }
 
-    // Método para añadir un sello a la colección
+    // Method to add a stamp to the collection
     public void anadirSello(Sello sello) {
         elementos.add(sello);
     }
 
-    // Método para mostrar todas las monedas de la colección
+    // Method to show all coins in the collection
     public List<Moneda> mostrarMonedas() {
         List<Moneda> monedas = new ArrayList<>();
         for (ElementoColeccionable elemento : elementos) {
@@ -37,7 +37,7 @@ public class Coleccion {
         return monedas;
     }
 
-    // Método para mostrar todos los sellos de la colección
+    // Method to show all stamps in the collection
     public List<Sello> mostrarSellos() {
         List<Sello> sellos = new ArrayList<>();
         for (ElementoColeccionable elemento : elementos) {
@@ -48,7 +48,7 @@ public class Coleccion {
         return sellos;
     }
 
-    // Método para obtener el precio total de la colección
+    // Method to get the total price of the collection
     public double obtenerPrecioTotal() {
         double total = 0;
         for (ElementoColeccionable elemento : elementos) {
@@ -57,7 +57,7 @@ public class Coleccion {
         return total;
     }
 
-    // Método para obtener la rareza media de la colección
+    // Method to get the average rarity of the collection
     public double obtenerRarezaMedia() {
         if (elementos.isEmpty()) {
             return 0;
