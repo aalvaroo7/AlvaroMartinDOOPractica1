@@ -1,6 +1,6 @@
 import uax.practica1.coleccion.Coleccion;
-import uax.practica1.enums.EstadoConservacionMoneda;
-import uax.practica1.enums.EstadoConservacionSello;
+import uax.practica1.Estado.EstadoConservacionMoneda;
+import uax.practica1.Estado.EstadoConservacionSello;
 import uax.practica1.moneda.Moneda;
 import uax.practica1.sello.Sello;
 

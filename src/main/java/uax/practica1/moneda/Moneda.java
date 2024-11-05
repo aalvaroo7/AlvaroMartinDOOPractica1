@@ -1,7 +1,8 @@
 package uax.practica1.moneda;
 
+import uax.practica1.Estado.EstadoConservacionMoneda;
 import uax.practica1.elementocoleccionable.ElementoColeccionable;
-import uax.practica1.enums.EstadoConservacionMoneda;
+
 
 public class Moneda extends ElementoColeccionable {
     private String composicion;
@@ -57,5 +58,23 @@ public class Moneda extends ElementoColeccionable {
 
     public void setEstadoConservacion(EstadoConservacionMoneda estadoConservacion) {
         this.estadoConservacion = estadoConservacion;
+    }
+
+    @Override
+    public String toString() {
+        return "Moneda{" +
+                "pais='" + getPais() + '\'' +
+                ", autoridadGobernante='" + getAutoridadGobernante() + '\'' +
+                ", annus=" + getAnnus() +
+                ", valor=" + getValor() +
+                ", unidadMonetaria='" + getUnidadMonetaria() + '\'' +
+                ", rareza=" + getRareza() +
+                ", precio=" + getPrecio() +
+                ", composicion='" + composicion + '\'' +
+                ", peso=" + peso +
+                ", diametro=" + diametro +
+                ", grosor=" + grosor +
+                ", estadoConservacion=" + estadoConservacion +
+                '}';
     }
 }
