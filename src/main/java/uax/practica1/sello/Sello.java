@@ -6,16 +6,14 @@ import uax.practica1.Estado.EstadoConservacionSello;
 public class Sello extends ElementoColeccionable {
     private double altura;
     private double anchura;
-    private double imagenAltura;
-    private double imagenAnchura;
+    private double tamanoImagen;
     private EstadoConservacionSello estadoConservacion;
 
-    public Sello(String pais, String autoridadGobernante, int annus, double valor, String unidadMonetaria, int rareza, double precio, double altura, double anchura, double imagenAltura, double imagenAnchura, EstadoConservacionSello estadoConservacion) {
+    public Sello(String pais, String autoridadGobernante, int annus, double valor, String unidadMonetaria, int rareza, double precio, double altura, double anchura, double tamanoImagen, EstadoConservacionSello estadoConservacion) {
         super(pais, autoridadGobernante, annus, valor, unidadMonetaria, rareza, precio);
         this.altura = altura;
         this.anchura = anchura;
-        this.imagenAltura = imagenAltura;
-        this.imagenAnchura = imagenAnchura;
+        this.tamanoImagen = tamanoImagen;
         this.estadoConservacion = estadoConservacion;
     }
 
@@ -35,20 +33,12 @@ public class Sello extends ElementoColeccionable {
         this.anchura = anchura;
     }
 
-    public double getImagenAltura() {
-        return imagenAltura;
+    public double getTamanoImagen() {
+        return tamanoImagen;
     }
 
-    public void setImagenAltura(double imagenAltura) {
-        this.imagenAltura = imagenAltura;
-    }
-
-    public double getImagenAnchura() {
-        return imagenAnchura;
-    }
-
-    public void setImagenAnchura(double imagenAnchura) {
-        this.imagenAnchura = imagenAnchura;
+    public void setTamanoImagen(double tamanoImagen) {
+        this.tamanoImagen = tamanoImagen;
     }
 
     public EstadoConservacionSello getEstadoConservacion() {
@@ -71,8 +61,7 @@ public class Sello extends ElementoColeccionable {
                 ", precio=" + getPrecio() +
                 ", altura=" + altura +
                 ", anchura=" + anchura +
-                ", imagenAltura=" + imagenAltura +
-                ", imagenAnchura=" + imagenAnchura +
+                ", tamanoImagen=" + tamanoImagen +
                 ", estadoConservacion=" + estadoConservacion +
                 '}';
     }

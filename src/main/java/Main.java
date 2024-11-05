@@ -313,33 +313,18 @@ public class Main {
                                 scanner.next();
                             }
                         }
-                        double imagenAltura = 0;
+                        double tamanoImagen = 0;
                         while (true) {
-                            System.out.print("Ingrese la altura de la imagen: ");
+                            System.out.print("Ingrese el tamaño de la imagen: ");
                             try {
-                                imagenAltura = scanner.nextDouble();
-                                if (imagenAltura >= 0) {
+                                tamanoImagen = scanner.nextDouble();
+                                if (tamanoImagen >= 0) {
                                     break;
                                 } else {
-                                    System.out.println("Altura de la imagen no válida. Por favor, ingrese un número no negativo.");
+                                    System.out.println("Tamaño de la imagen no válido. Por favor, ingrese un número no negativo.");
                                 }
                             } catch (InputMismatchException e) {
-                                System.out.println("Altura de la imagen no válida. Por favor, ingrese un número.");
-                                scanner.next();
-                            }
-                        }
-                        double imagenAnchura = 0;
-                        while (true) {
-                            System.out.print("Ingrese la anchura de la imagen: ");
-                            try {
-                                imagenAnchura = scanner.nextDouble();
-                                if (imagenAnchura >= 0) {
-                                    break;
-                                } else {
-                                    System.out.println("Anchura de la imagen no válida. Por favor, ingrese un número no negativo.");
-                                }
-                            } catch (InputMismatchException e) {
-                                System.out.println("Anchura de la imagen no válida. Por favor, ingrese un número.");
+                                System.out.println("Tamaño de la imagen no válido. Por favor, ingrese un número.");
                                 scanner.next();
                             }
                         }
@@ -353,7 +338,7 @@ public class Main {
                             System.out.println("Estado de conservación no válido. Intente de nuevo.");
                             break;
                         }
-                        Sello sello = new Sello(paisSello, autoridadSello, annusSello, valorSello, unidadMonetariaSello, rarezaSello, precioSello, altura, anchura, imagenAltura, imagenAnchura, estadoConservacionSello);
+                        Sello sello = new Sello(paisSello, autoridadSello, annusSello, valorSello, unidadMonetariaSello, rarezaSello, precioSello, altura, anchura, tamanoImagen, estadoConservacionSello);
                         coleccion.anadirSello(sello);
                         break;
                     case 3:
